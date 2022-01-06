@@ -15,8 +15,8 @@ onready var location_label: Label = $LocationNameLabel
 func _ready():
 	var _err = story.connect("InkContinued", self, "_on_story_continued")
 	
-	story.SetVariable("merchant", Player.character.name)
-	story.SetVariable("homesteader", Player.twin_character.name)
+	story.SetVariable("merchant", Game.player.name)
+	story.SetVariable("homesteader", Game.twin.name)
 	
 	story.BindExternalFunction("var_from_input", self, "var_from_input")
 	story.BindExternalFunction("force_map", self, "force_map")
@@ -48,7 +48,7 @@ func _on_question_answered(s: String, popup: TextInputPopup):
 	if not s:
 		s = popup.default
 	if _input_var_name == "lula":
-		Player.lula_character.name = s
+		Game.lula.name = s
 	story.SetVariable(_input_var_name, s)
 	popup.hide()
 	dialogue.can_advance = true

@@ -51,7 +51,7 @@ func set_participants(participant_names: Array) -> void:
 		return
 	
 	for name in participant_names:
-		if name == Player.character.ident:  # Don't show the player character ever
+		if name == Game.player.ident:  # Don't show the player character ever
 			continue
 		var portrait = participant_portrait_template.duplicate()
 		portrait.character = Character.load_from_name(name)
@@ -70,7 +70,7 @@ func _on_story_continued(text: String, tags: PoolStringArray) -> void:
 		if tag.begins_with("characters:") and use_large_portraits:
 			set_participants(tag.trim_prefix("characters:").strip_edges().split(" "))
 		if tag.begins_with("face_") or tag.begins_with("pose_"):
-			var target = speaker.ident if speaker else Player.character.ident
+			var target = speaker.ident if speaker else Game.player.ident
 			if ":" in tag:
 				tag = tag.split(":", true, 1)
 				target = tag[1]

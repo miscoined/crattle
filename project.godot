@@ -62,7 +62,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Player="*res://script/player.gd"
+Game="*res://script/player.gd"
 
 [debug]
 

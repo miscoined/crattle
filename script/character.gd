@@ -22,10 +22,10 @@ func portrait_body() -> Texture:
 	return _load_expression(expression_pose, "pose")
 
 static func load_from_name(name: String) -> Character:
-	if name.to_lower() == Player.twin_character.ident:
-		return Player.twin_character
-	if name.to_lower() == Player.character.ident:
-		return Player.character
+	if name.to_lower() == Game.twin.ident:
+		return Game.twin
+	if name.to_lower() == Game.player.ident:
+		return Game.player
 	return Util.load(
 		"res://characters/%s.tres" % name.capitalize(),
 		"res://characters/Placeholder.tres") as Character

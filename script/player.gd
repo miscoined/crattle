@@ -1,9 +1,9 @@
 extends Node
 
-var character = load("res://characters/Vivia.tres")
-var twin_character = load("res://characters/Vidal.tres")
-var lula_character = load("res://characters/Lula.tres")
+var player: Character = load("res://characters/Vivia.tres")
+var twin: Character = load("res://characters/Vidal.tres")
+var lula: Character = load("res://characters/Lula.tres")
 
 func _init():
-	character.ident = "merchant"
-	twin_character.ident = "homesteader"
+	player.ident = "merchant"
+	twin.ident = "homesteader"
