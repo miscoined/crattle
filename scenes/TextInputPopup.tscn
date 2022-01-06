@@ -1,0 +1,30 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PopupPanel" type="PopupPanel" parent="."]
+visible = true
+margin_left = 386.127
+margin_top = 206.533
+margin_right = 642.127
+margin_bottom = 370.533
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="PopupPanel/VBoxContainer"]
+margin_right = 98.0
+margin_bottom = 21.0
+text = "Question here?"
+__meta__ = {
+"_edit_use_anchors_": false
+}

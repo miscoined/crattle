@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://script/location.gd" type="Script" id=1]
+[ext_resource path="res://img/bg/ranch-caravan.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+background = ExtResource( 2 )
+display_name = "Santos Ranch, Caravan"

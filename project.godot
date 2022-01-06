@@ -1,0 +1,85 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "Character",
+"language": "GDScript",
+"path": "res://script/character.gd"
+}, {
+"base": "Control",
+"class": "CharacterPortrait",
+"language": "GDScript",
+"path": "res://script/character_portrait.gd"
+}, {
+"base": "",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://addons/godot-git-plugin/git_api.gdns"
+}, {
+"base": "Resource",
+"class": "Location",
+"language": "GDScript",
+"path": "res://script/location.gd"
+} ]
+_global_script_class_icons={
+"Character": "",
+"CharacterPortrait": "",
+"GitAPI": "",
+"Location": ""
+}
+
+[application]
+
+config/name="Crattle"
+run/main_scene="res://scenes/Dialog.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Player="*res://script/player.gd"
+
+[debug]
+
+gdscript/warnings/shadowed_variable=false
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/test_width=1024
+window/size/test_height=800
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/Todo_Manager/plugin.cfg", "res://addons/paulloz.ink/plugin.cfg", "res://addons/ui_design_tool/plugin.cfg" )
+
+[gdnative]
+
+singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
+
+[gui]
+
+theme/custom="res://theme.tres"
+theme/custom_font="res://font/DefaultFont.tres"
+
+[ink]
+
+inklecate_path="res://inklecate.exe"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
