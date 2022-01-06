@@ -1,30 +1,38 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
 
-[node name="Control" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[ext_resource path="res://script/input_popup.gd" type="Script" id=1]
+
+[node name="InputPopup" type="PopupPanel"]
+margin_left = 386.0
+margin_top = 303.0
+margin_right = 642.0
+margin_bottom = 371.0
+popup_exclusive = true
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PopupPanel" type="PopupPanel" parent="."]
-visible = true
-margin_left = 386.127
-margin_top = 206.533
-margin_right = 642.127
-margin_bottom = 370.533
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 251.0
+margin_bottom = 93.0
+alignment = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel"]
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="Label" type="Label" parent="PopupPanel/VBoxContainer"]
-margin_right = 98.0
-margin_bottom = 21.0
+[node name="QuestionLabel" type="Label" parent="VBoxContainer"]
+margin_right = 246.0
+margin_bottom = 37.0
 text = "Question here?"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AnswerInput" type="LineEdit" parent="VBoxContainer"]
+margin_top = 41.0
+margin_right = 246.0
+margin_bottom = 88.0
+placeholder_text = "Answer here"
