@@ -1,20 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://font/DefaultFont.tres" type="DynamicFont" id=1]
-[ext_resource path="res://font/DefaultFont-Italic.tres" type="DynamicFont" id=2]
-[ext_resource path="res://font/DefaultFont-Bold.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/SpeechBoxDocked.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/SpeechBoxFloating.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/Vidal.tres" type="Resource" id=4]
 [ext_resource path="res://scenes/CharacterPortrait.tscn" type="PackedScene" id=5]
 [ext_resource path="res://script/dialogue.gd" type="Script" id=6]
-[ext_resource path="res://font/VictorianParlor/VictorianParlor-Regular.otf" type="DynamicFontData" id=7]
-[ext_resource path="res://font/DefaultFont-BoldItalic.tres" type="DynamicFont" id=8]
-
-[sub_resource type="DynamicFont" id=1]
-size = 75
-outline_size = 1
-outline_color = Color( 0.760784, 1, 0.858824, 1 )
-use_filter = true
-font_data = ExtResource( 7 )
 
 [node name="Dialogue" type="Control"]
 anchor_right = 1.0
@@ -23,20 +13,22 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+can_advance = true
+is_docked = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/separation = -110
+custom_constants/separation = -90
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Participants" type="HBoxContainer" parent="VBoxContainer"]
 margin_right = 1920.0
-margin_bottom = 991.0
+margin_bottom = 874.0
 size_flags_vertical = 11
-size_flags_stretch_ratio = 5.0
+size_flags_stretch_ratio = 2.96
 alignment = 1
 __meta__ = {
 "_edit_group_": true,
@@ -47,9 +39,9 @@ __meta__ = {
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 735.0
-margin_top = 191.0
+margin_top = 74.0
 margin_right = 1185.0
-margin_bottom = 991.0
+margin_bottom = 874.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 450, 800 )
@@ -57,67 +49,23 @@ size_flags_horizontal = 0
 size_flags_vertical = 8
 character = ExtResource( 4 )
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
-margin_top = 881.0
+[node name="SpeechBoxFloating" parent="VBoxContainer" instance=ExtResource( 2 )]
+
+[node name="SpeechBoxDocked" parent="VBoxContainer" instance=ExtResource( 1 )]
+visible = false
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 850.0
 margin_right = 1920.0
 margin_bottom = 1080.0
-size_flags_vertical = 3
-custom_constants/margin_right = 10
-custom_constants/margin_left = 245
-custom_constants/margin_bottom = 10
-
-[node name="SpeechBox" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
-margin_left = 245.0
-margin_right = 1910.0
-margin_bottom = 189.0
-size_flags_vertical = 3
-
-[node name="SpeakerLabel" type="Label" parent="VBoxContainer/MarginContainer/SpeechBox"]
-margin_right = 1665.0
-margin_bottom = 76.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "Undying Vagabond"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/MarginContainer/SpeechBox"]
-margin_top = 80.0
-margin_right = 1665.0
-margin_bottom = 189.0
-rect_min_size = Vector2( 0, 80 )
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="SpeechTextLabel" type="RichTextLabel" parent="VBoxContainer/MarginContainer/SpeechBox/PanelContainer"]
-margin_left = 10.0
-margin_top = 5.0
-margin_right = 1655.0
-margin_bottom = 104.0
-mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/bold_italics_font = ExtResource( 8 )
-custom_fonts/italics_font = ExtResource( 2 )
-custom_fonts/bold_font = ExtResource( 3 )
-custom_fonts/normal_font = ExtResource( 1 )
-bbcode_enabled = true
-bbcode_text = "Testing dialogue text [i]italic[/i]"
-text = "Testing dialogue text italic"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="SmallPortrait" parent="." instance=ExtResource( 5 )]
 anchor_top = 1.0
 anchor_right = 0.0
-margin_top = -385.2
-margin_right = 227.68
-margin_bottom = 20.0
+margin_left = 53.8783
+margin_top = -404.0
+margin_right = 305.878
+margin_bottom = 15.0
 size_flags_horizontal = 0
 size_flags_vertical = 0

@@ -1,3 +1,4 @@
+tool
 extends Object
 # Utility script of static functions
 
@@ -10,3 +11,10 @@ static func load(res_path: String, fallback) -> Resource:
 	if fallback is String:
 		return load(fallback)
 	return fallback
+
+# Hide a node if running in editor, or free it otherwise.
+static func hide_or_free(node: Node) -> void:
+	if Engine.editor_hint:
+		node.hide()
+	else:
+		node.queue_free()

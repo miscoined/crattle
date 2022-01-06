@@ -15,7 +15,7 @@ func _ready():
 	question_label.text = prompt
 	answer_input.placeholder_text = default
 
-	answer_input.connect("text_entered", self, "_signal_input_entered")
+	var _err = answer_input.connect("text_entered", self, "_signal_input_entered")
 
 func init(prompt="Question?", default="Answer"):
 	self.prompt = prompt

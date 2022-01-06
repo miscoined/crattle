@@ -14,11 +14,13 @@ VAR homesteader_their = ""
 ~ homesteader_their = "his"
 ~ merchant_their = "her"
 
--> intro
-
 EXTERNAL var_from_input(prompt, default)
 === function var_from_input(prompt, default) ===
 ~ return 1
+
+EXTERNAL force_map()
+=== function force_map() ===
+~ return "TODO map here"
 
 === intro ===
 # location: santos_ranch_porch
@@ -97,9 +99,6 @@ You open your arms for a hug. {homesteader} rolls {homesteader_their} eyes, but 
 
 You climb on top of the wagon and take hold of {lula}'s antenna. One advantage of crattle over other livestock is they came with their own reigns. {homesteader} waves as you steer {lula} out the front gate of your family ranch.
 
--> intro_deep_gleam
-
-=== intro_deep_gleam ===
 # location: deep_gleam
 # characters:
 // Forested mountain path encased in crystals
@@ -108,11 +107,15 @@ You haven’t had the time to maintain the road properly, not since Nana got sic
 Every year, the crystals grow further and deeper. There used to be forests around your ranch, game to hunt and forage to find and fresh water in the rivers. Now, it’s all encased in crystal, too thick to clear yourselves and too dangerous for anyone else to touch. With that and Nana passing…you two can’t live on your own anymore.
 You haven’t been outside the Gleam since before Nana’s illness. You’ve always wanted to travel; the world out there is dangerous, and your gift means you’re uniquely advantaged to thrive in it. Granted, you thought it’d be more in a ‘sightseeing vacation’ sort of way, and less of a ‘traveling merchant trying to feed your starving family’, sort of way, but whatever.
 
--> intro_outer_gleam
+-> tutorial
 
-=== intro_outer_gleam ===
+=== tutorial ===
 # location: outer_gleam
 # characters:
 // Path along an open crystal mountain range
 
 The path opens up into the open mountainside. {lula} remembers this path; you hook her antennas on her saddle and let her plod along stalwartly, digging your map out of your bag.
+
+~ force_map()
+
+-> END

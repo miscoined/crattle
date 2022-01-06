@@ -7,13 +7,13 @@ export(String) var starting_knot = "intro_caravan"
 
 var _input_var_name = ""
 
-onready var story: InkStory = $Dialogue/InkStory
+onready var story: InkStory = $InkStory
 onready var dialogue: Dialogue = $Dialogue
 onready var background: TextureRect = $Background
 onready var location_label: Label = $LocationNameLabel
 
 func _ready():
-	story.connect("InkContinued", self, "_on_story_continued")
+	var _err = story.connect("InkContinued", self, "_on_story_continued")
 	
 	story.SetVariable("merchant", Player.character.name)
 	story.SetVariable("homesteader", Player.twin_character.name)
@@ -40,7 +40,7 @@ func var_from_input(prompt: String, var_name: String) -> void:
 	_input_var_name = var_name
 	var popup: TextInputPopup = TextInputPopup.instance().init(prompt, story.GetVariable(var_name))
 	add_child(popup)
-	var err := popup.connect("input_entered", self, "_on_question_answered")
+	var _err := popup.connect("input_entered", self, "_on_question_answered")
 	dialogue.can_advance = false
 	popup.popup_centered()
 
