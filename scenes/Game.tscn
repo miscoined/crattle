@@ -1,0 +1,19 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://script/game.gd" type="Script" id=1]
+[ext_resource path="res://addons/paulloz.ink/InkStory.cs" type="Script" id=2]
+[ext_resource path="res://dialog/Intro.ink" type="TextFile" id=3]
+[ext_resource path="res://characters/Vivia.tres" type="Resource" id=4]
+[ext_resource path="res://characters/Lula.tres" type="Resource" id=5]
+[ext_resource path="res://characters/Vidal.tres" type="Resource" id=6]
+
+[node name="Node" type="Node"]
+script = ExtResource( 1 )
+player = ExtResource( 4 )
+twin = ExtResource( 6 )
+lula = ExtResource( 5 )
+
+[node name="InkStory" type="Node" parent="."]
+script = ExtResource( 2 )
+AutoLoadStory = true
+InkFile = ExtResource( 3 )

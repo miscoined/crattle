@@ -3,6 +3,7 @@
 [ext_resource path="res://script/input_popup.gd" type="Script" id=1]
 
 [node name="InputPopup" type="PopupPanel"]
+pause_mode = 2
 margin_left = 386.0
 margin_top = 303.0
 margin_right = 642.0
@@ -17,7 +18,7 @@ __meta__ = {
 margin_left = 5.0
 margin_top = 5.0
 margin_right = 251.0
-margin_bottom = 101.0
+margin_bottom = 109.0
 alignment = 2
 __meta__ = {
 "_edit_use_anchors_": false

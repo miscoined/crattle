@@ -14,7 +14,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 can_advance = true
-is_docked = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -36,6 +35,7 @@ __meta__ = {
 }
 
 [node name="ParticipantPortraitTemplate" parent="VBoxContainer/Participants" instance=ExtResource( 5 )]
+visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 735.0
@@ -50,22 +50,21 @@ size_flags_vertical = 8
 character = ExtResource( 4 )
 
 [node name="SpeechBoxFloating" parent="VBoxContainer" instance=ExtResource( 2 )]
+visible = false
 
 [node name="SpeechBoxDocked" parent="VBoxContainer" instance=ExtResource( 1 )]
-visible = false
-anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 850.0
+margin_top = 784.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 
 [node name="SmallPortrait" parent="." instance=ExtResource( 5 )]
 anchor_top = 1.0
 anchor_right = 0.0
-margin_left = 53.8783
-margin_top = -404.0
-margin_right = 305.878
-margin_bottom = 15.0
+margin_left = 44.4975
+margin_top = -296.0
+margin_right = 318.497
+margin_bottom = 185.0
 size_flags_horizontal = 0
 size_flags_vertical = 0

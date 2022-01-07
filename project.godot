@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Resource",
+"class": "CargoType",
+"language": "GDScript",
+"path": "res://script/cargo_type.gd"
+}, {
+"base": "Resource",
 "class": "Character",
 "language": "GDScript",
 "path": "res://script/character.gd"
@@ -45,6 +50,7 @@ _global_script_classes=[ {
 "path": "res://script/input_popup.gd"
 } ]
 _global_script_class_icons={
+"CargoType": "",
 "Character": "",
 "CharacterPortrait": "",
 "Dialogue": "",
@@ -62,7 +68,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Game="*res://script/game.gd"
+Game="*res://scenes/Game.tscn"
 
 [debug]
 

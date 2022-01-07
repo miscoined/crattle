@@ -118,4 +118,31 @@ The path opens up into the open mountainside. {lula} remembers this path; you ho
 
 ~ force_map()
 
+Your cargo is mostly medicine, leftover from your Nana’s treatments. You and {homesteader} don’t need any, between your gifts. You still don’t know why they didn’t work on Nana. Why [i]nothing[/i] worked on Nana.
+
+TODO highlight medicine
+
+You can only hope the Crawfords are still kicking around the Rust Jungle. When you saw Merel and Corbin last, about a year and a half ago, they were living out of a truck scrapping to Radio City for a living.
+
+TODO Highlight target location, and hover-over with target location trade stats
+
+...you hope they’re not still mad about you stealing that truck. You [i]did[/i] return it, after all.
+
+TODO Highlight attitude
+
+Even if they are, you don’t expect them to turn down supplies like these. The Rust Jungle is dangerous, and you had to pay an arm and a leg to get them to begin with.
+
+TODO Highlight goods going rate
+
+You have two months. That’s all the supplies left on the farm. Coming out here is a gamble, but it’s really your only option.
+ 
+TODO Highlight requests/time to fill
+
+// Might alter times
+It’s four days to the edge of the Rust Jungle, and another three to make your way around Backbreaker Canyon. Radio City is two weeks away at a steady pace, but you’re going off memory from your last trip.
+If you’re lucky enough to find them, you can trade the Crawfords supplies to guide you there faster and safer than you can. If you’re very lucky, they’ll have food and water to trade, but you’re not optimistic; the last time you saw them they weren’t much better off than you are now.
+The Rust Jungle was the biggest city in the Scorch, pre-rifts. Now, it’s the rusting and broken carcass of the world that came before yours, filled with vicious wildlife and desperate scrappers. You can drive {lula} hard and fast, but it’ll be riskier; you’ll be a big target for anything that wants to eat you or rob you, and the terrain here is unstable and easy to get lost in. You can go slow and careful instead; less risk of delays or ambushes, but you don’t exactly have a lot of time to spare. Or you could split the difference.
+
+TODO Highlight travel speed and risk
+
 -> END
