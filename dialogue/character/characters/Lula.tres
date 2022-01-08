@@ -11,4 +11,3 @@ name = "Lula"
 display_name = "Lula Santos"
 default_face = ExtResource( 2 )
 default_pose = ExtResource( 3 )
-face_offset = Vector2( 0, 0 )

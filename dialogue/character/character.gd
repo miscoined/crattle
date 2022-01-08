@@ -7,7 +7,6 @@ export(String) var name
 export(String) var display_name
 export(Texture) var default_face = preload("res://dialogue/character/img/placeholder-face.png")
 export(Texture) var default_pose = preload("res://dialogue/character/img/placeholder-pose.png")
-export(Vector2) var face_offset
 
 const Emotion = preload("emotions.gd")
 const Util = preload("res://script/util.gd")
