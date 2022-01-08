@@ -40,8 +40,8 @@ func advance():
 
 func _on_continue(text: String, tags: PoolStringArray):
 	var should_signal_dialogue = false
-
 	var speaker = null
+	
 	if text.begins_with(ACTION_PREFIX):
 		emit_signal("story_commanded", text.trim_prefix(ACTION_PREFIX).strip_edges())
 	else:
@@ -55,6 +55,8 @@ func _on_continue(text: String, tags: PoolStringArray):
 
 	for tag in tags:
 		tag = tag.strip_edges()
+		if tag.begins_with(ACTION_PREFIX):
+			emit_signal("story_commanded", tag.trim_prefix(ACTION_PREFIX).strip_edges())
 		if tag.begins_with(LOCATION_PREFIX):
 			emit_signal(
 				"location_changed",

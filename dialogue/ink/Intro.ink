@@ -114,14 +114,14 @@ The path opens up into the open mountainside. {lula} remembers this path; you ho
 
 >>> force_map
 
+# >>> tut_highlight_meds
 Your cargo is mostly medicine, leftover from your Nana’s treatments. You and {homesteader} don’t need any, between your gifts. You still don’t know why they didn’t work on Nana. Why [i]nothing[/i] worked on Nana.
 
->>> tut_highlight_meds
-
+# >>> tut_highlight_meds_clear
 You can only hope the Crawfords are still kicking around the Rust Jungle. When you saw Merel and Corbin last, about a year and a half ago, they were living out of a truck scrapping to Radio City for a living.
 
-TODO Highlight target location, and hover-over with target location trade stats
 
+TODO Highlight target location, and hover-over with target location trade stats
 ...you hope they’re not still mad about you stealing that truck. You [i]did[/i] return it, after all.
 
 TODO Highlight attitude

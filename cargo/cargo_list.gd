@@ -1,8 +1,8 @@
 tool
-extends Tree
+extends Control
 
 const cargo1 = preload("item/Medicine.tres")
-const cargo2 = preload("item/Medicine2.tres")
+const cargo2 = preload("item/Food.tres")
 
 var cargo_tree_items = {}
 
