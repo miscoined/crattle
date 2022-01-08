@@ -7,11 +7,11 @@ onready var location_label: Label = $LocationNameLabel
 
 func _ready():
 	var _err = Story.connect("location_changed", self, "update_location")
-	_err = Story.connect("story_action_commanded", self, "_on_story_action_commanded")
+	_err = Story.connect("story_commanded", self, "_on_story_command")
 	Story.bind_external_function("var_from_input", self, "var_from_input")
 	Story.advance()
 
-func _on_story_action_commanded(command: String) -> void:
+func _on_story_command(command: String) -> void:
 	if command == "force_map":
 		get_tree().change_scene("res://scenes/Map.tscn")
 

@@ -3,7 +3,7 @@ extends Node
 signal dialogue_advanced
 signal dialogue_participants_changed
 signal location_changed
-signal story_action_commanded
+signal story_commanded
 
 const InkStory = preload("res://addons/paulloz.ink/InkStory.cs")
 
@@ -43,7 +43,7 @@ func _on_continue(text: String, tags: PoolStringArray):
 
 	var speaker = null
 	if text.begins_with(ACTION_PREFIX):
-		emit_signal("story_action_commanded", text.trim_prefix(ACTION_PREFIX).strip_edges())
+		emit_signal("story_commanded", text.trim_prefix(ACTION_PREFIX).strip_edges())
 	else:
 		if ":" in text:
 			var s = text.split(":", true, 1)
