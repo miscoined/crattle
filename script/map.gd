@@ -5,8 +5,9 @@ export(Texture) var map_texture: Texture
 
 onready var map: TextureRect = $VBoxContainer/HBoxContainer/Map
 onready var dialogue: Dialogue = $Dialogue
+onready var cargo_list: Tree = $VBoxContainer/HBoxContainer/Panel/VSplitContainer/CargoList
 
 func _ready():
 	map.texture = map_texture
 	if not Engine.editor_hint:
-		dialogue._on_story_continued(Game.story.get_CurrentText(), Game.story.get_CurrentTags())
+		Story.advance()

@@ -13,6 +13,6 @@ func _ready() -> void:
 	# Make speaker name display above speech text box
 	VisualServer.canvas_item_set_z_index(speaker_label.get_canvas_item(), 1)
 
-func set_dialogue(speaker: Character, text: String) -> void:
+func update_dialogue(text: String, speaker: Character) -> void:
 	speaker_label.text = speaker.display_name if speaker else ""
 	speech_text_label.bbcode_text = text

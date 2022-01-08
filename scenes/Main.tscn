@@ -1,7 +1,5 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://addons/paulloz.ink/InkStory.cs" type="Script" id=2]
-[ext_resource path="res://dialog/Intro.ink" type="TextFile" id=3]
 [ext_resource path="res://script/main.gd" type="Script" id=7]
 
 [node name="Control" type="Control"]
@@ -12,8 +10,3 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 starting_knot = "tutorial"
-
-[node name="InkStory" type="Node" parent="."]
-script = ExtResource( 2 )
-AutoLoadStory = true
-InkFile = ExtResource( 3 )

@@ -10,7 +10,7 @@ onready var answer_input: LineEdit = $VBoxContainer/AnswerInput
 
 func _ready():
 	question_label.text = prompt
-	answer_input.placeholder_text = Game.story.GetVariable(var_name)
+	answer_input.placeholder_text = Story.get_variable(var_name)
 
 	var _err = answer_input.connect("text_entered", self, "_signal_input_entered")
 	
@@ -26,7 +26,7 @@ func _signal_input_entered(s: String) -> void:
 		s = answer_input.placeholder_text
 	if var_name == "lula":
 		Game.lula.name = s
-	Game.story.SetVariable(var_name, s)
+	Story.set_variable(var_name, s)
 	hide()
 	get_tree().paused = false
 	queue_free()

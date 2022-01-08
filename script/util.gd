@@ -18,3 +18,7 @@ static func hide_or_free(node: Node) -> void:
 		node.hide()
 	else:
 		node.queue_free()
+
+# Trim a prefix and strip edges
+static func strim(prefix: String) -> String:
+	return prefix.trim_prefix(prefix).strip_edges()

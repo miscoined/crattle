@@ -18,10 +18,6 @@ EXTERNAL var_from_input(prompt, default)
 === function var_from_input(prompt, default) ===
 ~ return 1
 
-EXTERNAL force_map()
-=== function force_map() ===
-~ return "TODO map here"
-
 === intro ===
 # location: santos_ranch_porch
 # characters: Homesteader
@@ -116,11 +112,11 @@ You haven’t been outside the Gleam since before Nana’s illness. You’ve alw
 
 The path opens up into the open mountainside. {lula} remembers this path; you hook her antennas on her saddle and let her plod along stalwartly, digging your map out of your bag.
 
-~ force_map()
+>>> force_map
 
 Your cargo is mostly medicine, leftover from your Nana’s treatments. You and {homesteader} don’t need any, between your gifts. You still don’t know why they didn’t work on Nana. Why [i]nothing[/i] worked on Nana.
 
-TODO highlight medicine
+>>> tut_highlight_meds
 
 You can only hope the Crawfords are still kicking around the Rust Jungle. When you saw Merel and Corbin last, about a year and a half ago, they were living out of a truck scrapping to Radio City for a living.
 
