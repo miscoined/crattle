@@ -1,0 +1,12 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/game.gd" type="Script" id=1]
+[ext_resource path="res://dialogue/character/characters/Vivia.tres" type="Resource" id=4]
+[ext_resource path="res://dialogue/character/characters/Lula.tres" type="Resource" id=5]
+[ext_resource path="res://dialogue/character/characters/Vidal.tres" type="Resource" id=6]
+
+[node name="Node" type="Node"]
+script = ExtResource( 1 )
+player = ExtResource( 4 )
+twin = ExtResource( 6 )
+lula = ExtResource( 5 )

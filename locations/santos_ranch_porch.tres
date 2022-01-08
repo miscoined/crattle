@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
-[ext_resource path="res://script/location.gd" type="Script" id=1]
-[ext_resource path="res://img/bg/ranch-front.png" type="Texture" id=2]
+[ext_resource path="res://locations/location.gd" type="Script" id=1]
+[ext_resource path="res://locations/img/ranch-front.png" type="Texture" id=2]
 
 [resource]
 script = ExtResource( 1 )
